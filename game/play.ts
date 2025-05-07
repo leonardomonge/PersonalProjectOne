@@ -34,26 +34,25 @@ async function ElegirPokemon() {
     pokemones.forEach(info => {
       console.log("Num#:", info.id, "Nombre:", info.nombre, "Tipo:", info.tipo)
     });
- const seleccion1 = await preguntarpokemon(" Indique el primer numero:")
- const seleccion2 = await preguntarpokemon(" Indique el segundo numero:")
+   
+    const numero1 = await preguntarpokemon(" Indique el primer numero:")
+    const numero2 = await preguntarpokemon(" Indique el segundo numero:")
+   
+    const pokemon1 = pokemones[parseInt(numero1) - 1]
+    const pokemon2 = pokemones[parseInt(numero2) - 1]
 
- const pokemon1 = pokemones[parseInt(seleccion1) - 1]
- const pokemon2 = pokemones[parseInt(seleccion2) - 1]
+    console.log( " Jugador 1 seleccionaste a: ", pokemon1.nombre)
+    console.log( " Jugador 2 seleccionaste a: ", pokemon2.nombre)
 
- console.log( " Jugador 1 seleccionaste a: ", pokemon1.nombre)
- console.log( " Jugador 2 seleccionaste a: ", pokemon2.nombre)
+    rl.close();
 
- rl.close();
-}
+  } 
+       
+ 
+
 
 
 ElegirPokemon();
     
 
 
- // preguntar : nombre de la funcion
- // (pregunta: string) : el parametro que recibe, sera  un string " indique el pokemon?"
- /* Promise<string>  : un objeto que representa un valor disponible cuando termine la 
- operacion, osea " el pokemon seleccionado es pikachu" pero no lo tengo hasta que yo llame otra 
- vez la funcion abajo */
- //return new Promise((resolve) => { almacena la respuesta por un momento, el es mensajero
