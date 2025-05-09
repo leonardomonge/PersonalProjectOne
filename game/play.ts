@@ -34,24 +34,43 @@ async function ElegirPokemon() {
     pokemones.forEach(info => {
       console.log("Num#:", info.id, "Nombre:", info.nombre, "Tipo:", info.tipo)
     });
-   
-    const numero1 = await preguntarpokemon(" Indique el primer numero:")
-    const numero2 = await preguntarpokemon(" Indique el segundo numero:")
-   
-    const pokemon1 = pokemones[parseInt(numero1) - 1]
-    const pokemon2 = pokemones[parseInt(numero2) - 1]
+    const numeromenor = 1
+    const numeromayor = 4
 
-    console.log( " Jugador 1 seleccionaste a: ", pokemon1.nombre)
-    console.log( " Jugador 2 seleccionaste a: ", pokemon2.nombre)
+    while(true){
 
-    rl.close();
+    const numero1 = await preguntarpokemon(" Indique el numero del primer pokemon: ")
+    const numero2 = await preguntarpokemon(" Indique el numero del segundo pokemon: ")
+    const seleccion1 = parseInt(numero1)
+    const seleccion2 = parseInt(numero2)
+    
+     
+    
+      if(seleccion1 >= numeromenor && seleccion1 <= numeromayor && seleccion2 >= numeromenor && seleccion2 <=numeromayor  ){
 
+        if(seleccion1 !== seleccion2 ){
+          const pokemon1 = pokemones[seleccion1 - 1]
+          const pokemon2 = pokemones[seleccion2 - 1]
+      
+          console.log( " Jugador 1 seleccionaste a: ", pokemon1.nombre)
+          console.log( " Jugador 2 seleccionaste a: ", pokemon2.nombre)
+      
+          
+          rl.close();
+          break; 
+          
+        }else{
+          console.log( " !!!!! No puedes pelear con los mismos pokemones, escoge diferentes !!!! ")
+        }
+      
+    }else{
+      console.log( " !!!!! Digitaste un valor incorrecto, intenta otra vez !!!! ")
+    }
+    
   } 
+
        
- 
-
-
-
+}
 ElegirPokemon();
     
 
