@@ -1,7 +1,10 @@
+export enum TipoPokemon {
+    Electrico = "Electrico",
+    Fuego = "Fuego",
+    Agua = "Agua",
+    Planta = "Planta"
 
-
-
-
+}
 export class Pokemon {
     id: number;
     nombre: string;
@@ -19,25 +22,25 @@ constructor(id: number, nombre: string, tipo: string, ataque: number,  vida: num
 export class Pikachu extends Pokemon{
   
     constructor(){
-        super(1, "Pikachu", "Electrico", 33,100);
+        super(1, "Pikachu", TipoPokemon.Electrico, 33,100);
     }
 }
 export class Charmander extends Pokemon{
   
     constructor(){
-        super(2, "Charmander", "Fuego", 34 , 100);
+        super(2, "Charmander",TipoPokemon.Fuego, 34 , 100);
     }
 }
 export class Squirtle extends Pokemon{
   
     constructor(){
-        super(3,"Squirtle","Agua", 32 , 100 );
+        super(3,"Squirtle",TipoPokemon.Agua, 32 , 100 );
     }
 }
 export class Bulbasur extends Pokemon{
   
     constructor(){
-        super(4,"Bulbasur","Planta", 34 , 100  );
+        super(4,"Bulbasur",TipoPokemon.Planta, 34 , 100  );
     }
 }
 

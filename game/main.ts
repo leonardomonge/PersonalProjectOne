@@ -1,8 +1,9 @@
 import { ElegirPokemon } from "./pregunta";
-import { ComenzarBatalla } from "./Batalla";
+import { AtaquesEspecificos, ComenzarBatalla } from "./Batalla";
 
 async function ejecutar(){
     await ElegirPokemon();
+    AtaquesEspecificos();
     ComenzarBatalla();
   }
   
