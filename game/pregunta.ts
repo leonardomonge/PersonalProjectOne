@@ -44,10 +44,8 @@ export async function ElegirPokemon(): Promise<void> {
             pokemon1 = pokemones[seleccion1 - 1]
             pokemon2 = pokemones[seleccion2 - 1]
       
-          console.log("----------------- ", "\n -Jugador 1 seleccionaste a: ", pokemon1.nombre , "\n -tiene un ataque de:",
-          pokemon1.ataque, "\n -Es de tipo: ", pokemon1.tipo)
-          console.log("----------------- ", "\n -Jugador 2 seleccionaste a: ", pokemon2.nombre , "\n -tiene un ataque de:",
-          pokemon2.ataque, "\n -Es de tipo: ", pokemon2.tipo )
+          console.log("----------------- ", "\n -Jugador 1 seleccionaste a: ", pokemon1.nombre , "\n -Es de tipo: ", pokemon1.tipo)
+          console.log("----------------- ", "\n -Jugador 2 seleccionaste a: ", pokemon2.nombre , "\n -Es de tipo: ", pokemon2.tipo )
           break; 
         }else{
           console.log( " !!!!! No puedes pelear con los mismos pokemones, escoge diferentes !!!! ")
