@@ -11,7 +11,7 @@ export const Impactthunder = new Attack("Impactthunder", 16)
 export const Thunder = new Attack("Thunder", 12)
 
 export const Flare = new Attack("Flare", 20)
-export const FlameFire = new Attack("FlameFire", 8)
+export const FlameFire = new Attack("FlameFire", 10)
 
 export const Waterfall = new Attack("Waterfall", 18)
 export const WaterJet = new Attack("WaterJet", 12)

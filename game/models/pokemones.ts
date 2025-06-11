@@ -10,11 +10,11 @@ export enum PokemonType {
 export class Pokemon {
     id: number;
     name: string;
-    type: string 
+    type: PokemonType
     life: number
     attacks: Attack[]
 
-constructor(id: number, name: string, type: string, life: number, attacks:Attack[] ){
+constructor(id: number, name: string, type: PokemonType , life: number, attacks:Attack[] ){
     this.id = id
     this.name = name
     this.type = type
