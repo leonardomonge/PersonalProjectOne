@@ -16,10 +16,7 @@ export async function BattleBegins() {
   console.log("\n The judge has decided that the pokemon that attacks first  : ", pokemon1?.name)
 
 
-  const numMeno = 1
-  const numMayo = 2
-  
-
+ 
   async function ChooseAttack(): Promise<void> {
     console.log("\n  The", pokemon1.name, " attacks are:")
     pokemon1.attacks.forEach((Attack, position) => {
